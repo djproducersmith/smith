@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="referrer"
+    content="strict-origin-when-cross-origin">
+
+<title>Felipe Smith | DJ & Producer</title>
+
+<meta
+    name="description"
+    content="Felipe Smith — DJ & Producer | Afro House, Deep House, Progressive House e Melodic Techno">
+
+<meta
+    name="theme-color"
+    content="#050505">
+
+<style>
+
+    /* =====================================================
+       CONFIGURAÇÕES GERAIS
+    ===================================================== */
+
+    :root {
+        --black: #050505;
+        --black-light: #0b0b0b;
+        --black-card: #101010;
+        --green: #B6FF00;
+        --green-soft: rgba(182, 255, 0, 0.12);
+        --white: #ffffff;
+        --gray: #8b8b8b;
+        --gray-dark: #242424;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+    }
+
+    body {
+        background: var(--black);
+        color: var(--white);
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-x: hidden;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* =====================================================
+       BACKGROUND / GLOW
+    ===================================================== */
+
+    body::before {
+        content: "";
+        position: fixed;
+        width: 500px;
+        height: 500px;
+        top: -200px;
+        left: -200px;
+        background: rgba(182, 255, 0, 0.07);
+        filter: blur(130px);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    body::after {
+        content: "";
+        position: fixed;
+        width: 500px;
+        height: 500px;
+        bottom: -250px;
+        right: -200px;
+        background: rgba(182, 255, 0, 0.05);
+        filter: blur(140px);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0 6%;
+
+        background: rgba(5, 5, 5, 0.78);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+
+        z-index: 999;
+    }
+
+    .nav-logo img {
+        height: 45px;
+        width: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .nav-links a {
+        color: #999;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: var(--green);
+    }
+
+    .menu-button {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        min-height: 100vh;
+
+        display: grid;
+        grid-template-columns: 1fr 0.85fr;
+
+        align-items: center;
+
+        gap: 60px;
+
+        padding: 130px 8% 80px;
+
+        position: relative;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        margin-bottom: 25px;
+
+        color: var(--green);
+
+        font-size: 11px;
+        font-weight: 700;
+
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    .hero-label::before {
+        content: "";
+        width: 30px;
+        height: 1px;
+        background: var(--green);
+        box-shadow: 0 0 10px var(--green);
+    }
+
+    .hero h1 {
+        font-size: clamp(65px, 9vw, 125px);
+        line-height: 0.82;
+        letter-spacing: -7px;
+        font-weight: 900;
+        margin-bottom: 35px;
+    }
+
+    .hero h1 span {
+        display: block;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(255,255,255,0.8);
+        transition: 0.4s;
+    }
+
+    .hero h1 span:hover {
+        color: var(--green);
+        -webkit-text-stroke: 1px var(--green);
+        text-shadow: 0 0 30px rgba(182,255,0,0.35);
+    }
+
+    .hero-description {
+        max-width: 560px;
+
+        color: var(--gray);
+
+        font-size: 17px;
+        line-height: 1.8;
+
+        margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    /* =====================================================
+       BOTÕES
+    ===================================================== */
+
+    .button {
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        min-height: 52px;
+
+        padding: 0 25px;
+
+        border-radius: 6px;
+
+        font-size: 11px;
+        font-weight: 800;
+
+        letter-spacing: 1.5px;
+
+        transition: 0.3s;
+    }
+
+    .button-primary {
+        background: var(--green);
+        color: #000;
+    }
+
+    .button-primary:hover {
+        transform: translateY(-3px);
+
+        box-shadow:
+            0 10px 35px rgba(182,255,0,0.22);
+    }
+
+    .button-secondary {
+        color: white;
+
+        border: 1px solid #333;
+
+        background: rgba(255,255,255,0.02);
+    }
+
+    .button-secondary:hover {
+        border-color: var(--green);
+        color: var(--green);
+        transform: translateY(-3px);
+    }
+
+    /* =====================================================
+       FOTO PRINCIPAL
+    ===================================================== */
+
+    .hero-photo {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 600px;
+    }
+
+    .hero-photo::before {
+        content: "";
+
+        position: absolute;
+
+        width: 380px;
+        height: 380px;
+
+        border-radius: 50%;
+
+        background: rgba(182,255,0,0.07);
+
+        filter: blur(80px);
+
+        z-index: -1;
+    }
+
+    .hero-photo img {
+        max-width: 100%;
+        max-height: 650px;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        filter:
+            drop-shadow(0 25px 40px rgba(0,0,0,0.8))
+            drop-shadow(0 0 25px rgba(182,255,0,0.10));
+
+        animation: floating 6s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+
+    }
+
+    /* =====================================================
+       SEÇÕES
+    ===================================================== */
+
+    section {
+        padding: 130px 8%;
+    }
+
+    .section-label {
+        color: var(--green);
+
+        font-size: 11px;
+        font-weight: 700;
+
+        letter-spacing: 3px;
+        text-transform: uppercase;
+
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: clamp(40px, 6vw, 75px);
+
+        line-height: 0.95;
+
+        letter-spacing: -4px;
+
+        margin-bottom: 60px;
+    }
+
+    /* =====================================================
+       BIOGRAFIA
+    ===================================================== */
+
+    .bio-grid {
+        display: grid;
+
+        grid-template-columns: 0.9fr 1.1fr;
+
+        gap: 90px;
+
+        align-items: start;
+    }
+
+    .bio-highlight {
+        font-size: clamp(20px, 2.2vw, 30px);
+        line-height: 1.65;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .bio-highlight span {
+        color: var(--green);
+    }
+
+    .bio-text {
+        color: var(--gray);
+
+        font-size: 17px;
+
+        line-height: 1.9;
+    }
+
+    /* =====================================================
+       ESTILOS MUSICAIS
+    ===================================================== */
+
+    .genres {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 15px;
+    }
+
+    .genre {
+        position: relative;
+
+        min-height: 180px;
+
+        padding: 30px;
+
+        background: var(--black-card);
+
+        border: 1px solid var(--gray-dark);
+
+        border-radius: 8px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        overflow: hidden;
+
+        transition: 0.35s;
+    }
+
+    .genre::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 3px;
+        height: 0;
+
+        background: var(--green);
+
+        box-shadow: 0 0 15px var(--green);
+
+        transition: 0.35s;
+    }
+
+    .genre:hover {
+        transform: translateY(-6px);
+
+        border-color: rgba(182,255,0,0.35);
+
+        background: #111;
+    }
+
+    .genre:hover::before {
+        height: 100%;
+    }
+
+    .genre-number {
+        color: #555;
+
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+    .genre h3 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    /* =====================================================
+       EXPERIÊNCIA
+    ===================================================== */
+
+    .experience {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 20px;
+    }
+
+    .experience-card {
+        padding: 40px 35px;
+
+        background: #090909;
+
+        border: 1px solid #202020;
+
+        border-radius: 8px;
+
+        transition: 0.3s;
+    }
+
+    .experience-card:hover {
+        border-color: rgba(182,255,0,0.3);
+        transform: translateY(-5px);
+    }
+
+    .experience-card h3 {
+        color: var(--green);
+
+        font-size: 25px;
+
+        margin-bottom: 20px;
+    }
+
+    .experience-card p {
+        color: var(--gray);
+
+        line-height: 1.8;
+    }
+
+    /* =====================================================
+       PRESS KIT
+    ===================================================== */
+
+    .press-section {
+        position: relative;
+    }
+
+    .press-box {
+        position: relative;
+
+        overflow: hidden;
+
+        text-align: center;
+
+        padding: 90px 30px;
+
+        border: 1px solid #272727;
+
+        border-radius: 15px;
+
+        background:
+            linear-gradient(
+                135deg,
+                #111 0%,
+                #070707 60%
+            );
+    }
+
+    .press-box::before {
+        content: "";
+
+        position: absolute;
+
+        width: 300px;
+        height: 300px;
+
+        background: rgba(182,255,0,0.08);
+
+        filter: blur(90px);
+
+        top: -150px;
+        right: -100px;
+    }
+
+    .press-box h2 {
+        position: relative;
+
+        font-size: clamp(45px, 7vw, 85px);
+
+        letter-spacing: -4px;
+
+        margin-bottom: 20px;
+    }
+
+    .press-box p {
+        position: relative;
+
+        max-width: 600px;
+
+        margin: 0 auto 35px;
+
+        color: var(--gray);
+
+        line-height: 1.8;
+    }
+
+    .press-buttons {
+        position: relative;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 14px;
+
+        flex-wrap: wrap;
+    }
+
+    /* =====================================================
+       REDES SOCIAIS
+    ===================================================== */
+
+    .socials {
+        display: flex;
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+    .social {
+        padding: 16px 25px;
+
+        border: 1px solid #292929;
+
+        border-radius: 6px;
+
+        color: #aaa;
+
+        font-size: 12px;
+
+        letter-spacing: 1px;
+
+        transition: 0.3s;
+    }
+
+    .social:hover {
+        color: var(--green);
+
+        border-color: var(--green);
+
+        box-shadow:
+            0 0 20px rgba(182,255,0,0.08);
+
+        transform: translateY(-3px);
+    }
+
+    /* =====================================================
+       VÍDEOS
+    ===================================================== */
+
+    .video-section {
+        position: relative;
+    }
+
+    .video-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+    }
+
+    .video-card {
+        background: #090909;
+
+        border: 1px solid #202020;
+
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        transition: 0.35s;
+    }
+
+    .video-card:hover {
+        transform: translateY(-5px);
+
+        border-color: rgba(182,255,0,0.35);
+
+        box-shadow:
+            0 15px 45px rgba(0,0,0,0.35);
+    }
+
+    .video-container {
+        position: relative;
+
+        width: 100%;
+
+        aspect-ratio: 16 / 9;
+
+        background: #000;
+
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        top: 0;
+        left: 0;
+
+        border: 0;
+    }
+
+    .video-info {
+        padding: 22px;
+    }
+
+    .video-number {
+        display: block;
+
+        color: var(--green);
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 8px;
+    }
+
+    .video-title {
+        color: white;
+
+        font-size: 18px;
+
+        font-weight: 700;
+
+        margin-bottom: 18px;
+    }
+
+    .youtube-button {
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        min-height: 44px;
+
+        padding: 0 18px;
+
+        border: 1px solid #333;
+
+        border-radius: 5px;
+
+        color: white;
+
+        font-size: 10px;
+
+        font-weight: 800;
+
+        letter-spacing: 1.3px;
+
+        transition: 0.3s;
+    }
+
+    .youtube-button:hover {
+        color: #000;
+
+        background: var(--green);
+
+        border-color: var(--green);
+
+        box-shadow:
+            0 8px 25px rgba(182,255,0,0.15);
+
+        transform: translateY(-2px);
+    }
+
+    /* =====================================================
+       CONTATO
+    ===================================================== */
+
+    .contact {
+        text-align: center;
+
+        padding-bottom: 150px;
+    }
+
+    .contact h2 {
+        font-size: clamp(50px, 8vw, 100px);
+
+        line-height: 0.9;
+
+        letter-spacing: -5px;
+
+        margin-bottom: 25px;
+    }
+
+    .contact p {
+        color: var(--gray);
+
+        margin-bottom: 35px;
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+        display: flex;
+
+        justify-content: space-between;
+
+        padding: 30px 8%;
+
+        border-top: 1px solid #181818;
+
+        color: #555;
+
+        font-size: 11px;
+
+        letter-spacing: 1px;
+    }
+
+    /* =====================================================
+       ANIMAÇÃO DE ENTRADA
+    ===================================================== */
+
+    .fade-in {
+        animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 950px) {
+
+        .hero {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+
+        .hero-description {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            justify-content: center;
+        }
+
+        .hero-photo {
+            min-height: auto;
+        }
+
+        .hero-photo img {
+            max-height: 550px;
+        }
+
+        .bio-grid {
+            grid-template-columns: 1fr;
+            gap: 35px;
+        }
+
+        .genres {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .experience {
+            grid-template-columns: 1fr;
+        }
+
+        .video-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    /* =====================================================
+       CELULAR
+    ===================================================== */
+
+    @media (max-width: 650px) {
+
+        nav {
+            height: 70px;
+            padding: 0 6%;
+        }
+
+        .nav-logo img {
+            height: 38px;
+        }
+
+        .nav-links {
+            display: none;
+
+            position: absolute;
+
+            top: 70px;
+            left: 0;
+
+            width: 100%;
+
+            padding: 25px;
+
+            background: rgba(5,5,5,0.98);
+
+            flex-direction: column;
+
+            text-align: center;
+
+            gap: 25px;
+
+            border-bottom: 1px solid #222;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .menu-button {
+            display: block;
+        }
+
+        .hero {
+            padding: 120px 6% 70px;
+            gap: 45px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            letter-spacing: -4px;
+        }
+
+        .hero-description {
+            font-size: 15px;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+        }
+
+        .button {
+            width: 100%;
+        }
+
+        section {
+            padding: 90px 6%;
+        }
+
+        .section-title {
+            letter-spacing: -2px;
+        }
+
+        .genres {
+            grid-template-columns: 1fr;
+        }
+
+        .genre {
+            min-height: 150px;
+        }
+
+        .press-box {
+            padding: 60px 20px;
+        }
+
+        .press-buttons {
+            flex-direction: column;
+        }
+
+        .socials {
+            flex-direction: column;
+        }
+
+        .social {
+            text-align: center;
+        }
+
+        .video-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .video-info {
+            padding: 18px;
+        }
+
+        .youtube-button {
+            width: 100%;
+        }
+
+        .contact h2 {
+            letter-spacing: -3px;
+        }
+
+        footer {
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- =====================================================
+     MENU
+===================================================== -->
+
+<nav>
+
+    <a
+        href="#"
+        class="nav-logo">
+
+        <img
+            src="logo-felipe.png"
+            alt="Felipe Smith">
+
+    </a>
+
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Abrir menu">
+
+        ☰
+
+    </button>
+
+
+    <div
+        class="nav-links"
+        id="navLinks">
+
+        <a href="#about">
+            Sobre
+        </a>
+
+        <a href="#music">
+            Música
+        </a>
+
+        <a href="#experience">
+            Experiência
+        </a>
+
+        <a href="#press">
+            Press Kit
+        </a>
+
+        <a href="#video">
+            Vídeo
+        </a>
+
+        <a href="#contact">
+            Contato
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero">
+
+    <div class="hero-content fade-in">
+
+        <div class="hero-label">
+            DJ & Produtor
+        </div>
+
+        <h1>
+            FELIPE
+            <span>
+                SMITH
+            </span>
+        </h1>
+
+        <p class="hero-description">
+            DJ e produtor Curitibano, traz uma
+            experiência musical que conecta House,
+            Techno e suas vertentes.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="press-kit.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-primary">
+
+                VER PRESS KIT
+
+            </a>
+
+            <a
+                href="press-kit.pdf"
+                download
+                class="button button-secondary">
+
+                BAIXAR PDF
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOTO PRINCIPAL -->
+
+    <div class="hero-photo fade-in">
+
+        <img
+            src="foto-felipe.png"
+            alt="Felipe Smith DJ">
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     SOBRE
+===================================================== -->
+
+<section id="about">
+
+    <div class="section-label">
+         — Sobre
+    </div>
+
+    <h2 class="section-title">
+        Música, energia<br>
+        e identidade.
+    </h2>
+
+    <div class="bio-grid">
+
+        <div>
+
+            <p class="bio-highlight">
+
+                Felipe Gabriel Smith<br>
+                São José dos Pinhais — PR, Brasil.<br>
+                23 anos.<br>
+                Formado como DJ &amp; Produtor pela AIMEC Curitiba.
+
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <p class="bio-text">
+
+                Com uma identidade musical voltada
+                para a House Music, Smith transita
+                por diferentes vertentes da música
+                eletrônica, explorando grooves,
+                atmosferas e elementos que conectam
+                o público à pista.
+
+                <br><br>
+
+                Seu repertório passeia por House,
+                Afro House, Progressive House e Deep House e
+                Melodic Techno, permitindo construir sets que vão
+                do warm-up a momentos de maior
+                intensidade.
+
+                <br><br>
+
+                Sets envolventes, Smith tem um jeito
+                sutil de elevar a energia da festa,
+                explorando e transitando entre
+                Techno, House e suas vertentes.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ESTILOS MUSICAIS
+===================================================== -->
+
+<section id="music">
+
+    <div class="section-label">
+        — Estilos
+    </div>
+
+    <h2 class="section-title">
+        Frequências que<br>
+        definem o Set.
+    </h2>
+
+    <div class="genres">
+
+        <div class="genre">
+            <span class="genre-number">01</span>
+            <h3>House</h3>
+        </div>
+
+        <div class="genre">
+            <span class="genre-number">02</span>
+            <h3>Afro House</h3>
+        </div>
+
+        <div class="genre">
+            <span class="genre-number">03</span>
+            <h3>Deep House</h3>
+        </div>
+
+        <div class="genre">
+            <span class="genre-number">04</span>
+            <h3>Progressive House</h3>
+        </div>
+
+        <div class="genre">
+            <span class="genre-number">05</span>
+            <h3>Melodic House Techno</h3>
+        </div>
+
+        <div class="genre">
+            <span class="genre-number">06</span>
+            <h3>Techno</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EXPERIÊNCIA
+===================================================== -->
+
+<section id="experience">
+
+    <div class="section-label">
+        — Experiência
+    </div>
+
+    <h2 class="section-title">
+        Presença na pista.
+    </h2>
+
+    <div class="experience">
+
+        <div class="experience-card">
+
+            <h3>
+                CLUBS
+            </h3>
+
+            <p>
+                Sets desenvolvidos para clubes,
+                lounges e pistas de música
+                eletrônica, adaptando energia
+                e repertório ao momento da noite.
+            </p>
+
+        </div>
+
+
+        <div class="experience-card">
+
+            <h3>
+                EVENTS
+            </h3>
+
+            <p>
+                Experiência em eventos particulares,
+                festas, celebrações e diferentes
+                formatos de apresentação.
+            </p>
+
+        </div>
+
+
+        <div class="experience-card">
+
+            <h3>
+                WARM UP
+            </h3>
+
+            <p>
+                Construção de atmosferas e evolução
+                musical para preparar a pista para
+                grandes apresentações.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRESS KIT
+===================================================== -->
+
+<section
+    id="press"
+    class="press-section">
+
+    <div class="press-box">
+
+        <div class="section-label">
+            Press Kit Oficial
+        </div>
+
+        <h2>
+            Felipe Smith
+        </h2>
+
+        <p>
+            Biografia, informações profissionais,
+            estilos musicais e materiais para
+            contratantes, produtores, festivais,
+            clubs e marcas.
+        </p>
+
+        <div class="press-buttons">
+
+            <a
+                href="press-kit.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button button-primary">
+
+                ABRIR PRESS KIT
+
+            </a>
+
+            <a
+                href="press-kit.pdf"
+                download
+                class="button button-secondary">
+
+                DOWNLOAD PDF
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     REDES SOCIAIS
+===================================================== -->
+
+<section id="social">
+
+    <div class="section-label">
+        — Conecte-se
+    </div>
+
+    <h2 class="section-title">
+        Felipe Smith<br>
+        
+    </h2>
+
+    <div class="socials">
+
+        <a
+            href="https://www.instagram.com/djsmith____/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social">
+
+            Instagram
+
+        </a>
+
+        <a
+            href="https://www.youtube.com/@smithdjofc"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social">
+
+            YouTube
+
+        </a>
+
+        <a
+            href="https://soundcloud.com/smithdjofc"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social">
+
+            SoundCloud
+
+        </a>
+
+        <a
+            href="https://wa.me/5541997921105"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social">
+
+            WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     VÍDEOS
+     IMPORTANTE:
+     Os vídeos são carregados automaticamente pelo JavaScript.
+===================================================== -->
+
+<section
+    id="video"
+    class="video-section">
+
+    <div class="section-label">
+        — Vídeo
+    </div>
+
+    <h2 class="section-title">
+        Smith<br>
+        Dj Set`s.
+    </h2>
+
+    <div class="video-grid">
+
+
+        <!-- =================================================
+             VÍDEO 01
+        ================================================= -->
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <iframe
+                    id="youtube-video-1"
+                    title="SMITH - House Session EP #07 - Duraçåo 05:02:07"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-info">
+
+                <span class="video-number">
+                    VIDEO 01
+                </span>
+
+                <h3 class="video-title">
+                    Felipe Smith
+                </h3>
+
+                <a
+                    id="youtube-link-1"
+                    href="https://www.youtube.com/watch?v=BhiieiD2BtI"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-button">
+
+                    ASSISTIR NO YOUTUBE
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             VÍDEO 02
+        ================================================= -->
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <iframe
+                    id="youtube-video-2"
+                    title="Felipe Smith - Vídeo 02"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-info">
+
+                <span class="video-number">
+                    VIDEO 02
+                </span>
+
+                <h3 class="video-title">
+                    Felipe Smith
+                </h3>
+
+                <a
+                    id="youtube-link-2"
+                    href="https://www.youtube.com/watch?v=v0V72GxZNBU"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-button">
+
+                    ASSISTIR NO YOUTUBE
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             VÍDEO 03
+        ================================================= -->
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <iframe
+                    id="youtube-video-3"
+                    title="Felipe Smith - Vídeo 03"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-info">
+
+                <span class="video-number">
+                    VIDEO 03
+                </span>
+
+                <h3 class="video-title">
+                    Felipe Smith
+                </h3>
+
+                <a
+                    id="youtube-link-3"
+                    href="https://www.youtube.com/watch?v=gRtEIcWHBqo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-button">
+
+                    ASSISTIR NO YOUTUBE
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             VÍDEO 04
+        ================================================= -->
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <iframe
+                    id="youtube-video-4"
+                    title="Felipe Smith - Vídeo 04"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-info">
+
+                <span class="video-number">
+                    VIDEO 04
+                </span>
+
+                <h3 class="video-title">
+                    Felipe Smith
+                </h3>
+
+                <a
+                    id="youtube-link-4"
+                    href="https://www.youtube.com/watch?v=RT5Cg265X88"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-button">
+
+                    ASSISTIR NO YOUTUBE
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTATO / BOOKING
+===================================================== -->
+
+<section id="contact">
+
+    <div class="contact">
+
+        <div class="section-label">
+            Booking & Contact
+        </div>
+
+        <h2>
+            Vamos criar<br>
+            algo juntos.
+        </h2>
+
+        <p>
+            Para bookings, eventos, clubs,
+            festivais e parcerias.
+        </p>
+
+        <a
+            href="mailto:felipegsmith14@gmail.com"
+            class="button button-primary">
+
+            ENTRAR EM CONTATO
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <span>
+        © 2026 Felipe Smith
+    </span>
+
+    <span>
+        DJ & Producer
+    </span>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    /* =====================================================
+       MENU MOBILE
+    ===================================================== */
+
+    function toggleMenu() {
+
+        const menu =
+            document.getElementById("navLinks");
+
+        menu.classList.toggle("active");
+
+    }
+
+
+    /* Fecha o menu ao clicar em um link */
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                document
+                    .getElementById("navLinks")
+                    .classList.remove("active");
+
+            });
+
+        });
+
+
+    /* =====================================================
+       VÍDEOS DO YOUTUBE
+
+       ALTERE SOMENTE ESTA LISTA QUANDO QUISER
+       TROCAR OS VÍDEOS.
+    ===================================================== */
+
+    const VIDEO_YOUTUBE = [
+
+        "https://www.youtube.com/watch?v=BhiieiD2BtI",
+
+        "https://www.youtube.com/watch?v=v0V72GxZNBU",
+
+        "https://www.youtube.com/watch?v=gRtEIcWHBqo",
+
+        "https://www.youtube.com/watch?v=RT5Cg265X88"
+
+    ];
+
+
+    /* =====================================================
+       CONVERTER QUALQUER LINK DO YOUTUBE PARA ID
+       
+       Aceita:
+       youtube.com/watch?v=ID
+       youtu.be/ID
+       youtube.com/shorts/ID
+       youtube.com/embed/ID
+    ===================================================== */
+
+    function getYouTubeID(url) {
+
+        if (!url || typeof url !== "string") {
+            return null;
+        }
+
+        try {
+
+            const cleanURL = url.trim();
+
+            const urlObject = new URL(cleanURL);
+
+            const hostname =
+                urlObject.hostname
+                    .replace("www.", "")
+                    .toLowerCase();
+
+
+            /* youtube.com/watch?v= */
+
+            if (
+                hostname === "youtube.com" ||
+                hostname === "m.youtube.com"
+            ) {
+
+                const videoID =
+                    urlObject.searchParams.get("v");
+
+                if (videoID) {
+                    return videoID;
+                }
+
+
+                /* /shorts/ID */
+
+                if (
+                    urlObject.pathname.startsWith("/shorts/")
+                ) {
+
+                    return urlObject.pathname
+                        .split("/shorts/")[1]
+                        .split("/")[0];
+
+                }
+
+
+                /* /embed/ID */
+
+                if (
+                    urlObject.pathname.startsWith("/embed/")
+                ) {
+
+                    return urlObject.pathname
+                        .split("/embed/")[1]
+                        .split("/")[0];
+
+                }
+
+            }
+
+
+            /* youtu.be/ID */
+
+            if (hostname === "youtu.be") {
+
+                return urlObject.pathname
+                    .substring(1)
+                    .split("/")[0];
+
+            }
+
+
+            return null;
+
+        }
+
+        catch (error) {
+
+            console.error(
+                "Erro ao identificar vídeo do YouTube:",
+                error
+            );
+
+            return null;
+
+        }
+
+    }
+
+
+    /* =====================================================
+       CONFIGURAR PLAYERS
+       
+       IMPORTANTE:
+       Usamos youtube-nocookie.com para o embed.
+       O parâmetro origin é utilizado somente quando
+       o site estiver hospedado em HTTP/HTTPS.
+    ===================================================== */
+
+    function setupYouTubeVideos() {
+
+        VIDEO_YOUTUBE.forEach(
+            (videoURL, index) => {
+
+                const videoID =
+                    getYouTubeID(videoURL);
+
+                const videoNumber =
+                    index + 1;
+
+                const iframe =
+                    document.getElementById(
+                        `youtube-video-${videoNumber}`
+                    );
+
+                const youtubeButton =
+                    document.getElementById(
+                        `youtube-link-${videoNumber}`
+                    );
+
+
+                if (!iframe) {
+                    return;
+                }
+
+
+                if (!videoID) {
+
+                    console.error(
+                        `URL inválida no vídeo ${videoNumber}:`,
+                        videoURL
+                    );
+
+                    return;
+
+                }
+
+
+                /*
+                 * URL segura do player do YouTube.
+                 */
+
+                let embedURL =
+                    `https://www.youtube-nocookie.com/embed/${videoID}?rel=0&modestbranding=1&playsinline=1`;
+
+
+                /*
+                 * Quando o site estiver hospedado,
+                 * enviamos a origem para o YouTube.
+                 *
+                 * Isso ajuda a evitar problemas de
+                 * configuração do player.
+                 */
+
+                if (
+                    window.location.protocol === "http:" ||
+                    window.location.protocol === "https:"
+                ) {
+
+                    embedURL +=
+                        `&origin=${encodeURIComponent(window.location.origin)}`;
+
+                }
+
+
+                iframe.src = embedURL;
+
+
+                /*
+                 * Botão "ASSISTIR NO YOUTUBE"
+                 */
+
+                if (youtubeButton) {
+
+                    youtubeButton.href =
+                        videoURL;
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       INICIALIZAÇÃO
+    ===================================================== */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        setupYouTubeVideos
+    );
+
+</script>
+```
+
+</body>
+
+</html>
