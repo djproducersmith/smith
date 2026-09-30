@@ -654,6 +654,68 @@
     }
 
     /* =====================================================
+       TRACKS AUTORAIS
+    ===================================================== */
+
+    .tracks-section {
+        position: relative;
+    }
+
+    .tracks-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .track-card {
+        background: #090909;
+        border: 1px solid #202020;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: 0.35s;
+    }
+
+    .track-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(182,255,0,0.35);
+        box-shadow:
+            0 15px 45px rgba(0,0,0,0.35);
+    }
+
+    .track-info {
+        padding: 22px;
+    }
+
+    .track-number {
+        display: block;
+        color: var(--green);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+
+    .track-title {
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .track-subtitle {
+        color: var(--gray);
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .soundcloud-player {
+        width: 100%;
+        height: 166px;
+        border: 0;
+        display: block;
+    }
+
+    /* =====================================================
        VÍDEOS
     ===================================================== */
 
@@ -890,6 +952,10 @@
         }
 
         .video-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .tracks-grid {
             grid-template-columns: 1fr;
         }
 
@@ -1262,6 +1328,119 @@
         <div class="genre">
             <span class="genre-number">06</span>
             <h3>Techno</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TRACKS AUTORAIS
+===================================================== -->
+
+<section id="tracks" class="tracks-section">
+
+    <div class="section-label">
+        — Tracks
+    </div>
+
+    <h2 class="section-title">
+        Original<br>
+        Unreleased.
+    </h2>
+
+    <p class="bio-text" style="max-width: 700px; margin-bottom: 45px;">
+        Uma seleção de produções autorais ainda não lançadas oficialmente,
+        representando a direção sonora e o nível de produção atual de Smith.
+    </p>
+
+    <div class="tracks-grid">
+
+        <div class="track-card">
+
+            <iframe
+                class="soundcloud-player"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/smithdjofc/smith-submerged-extended-mix&color=%23B6FF00&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+            </iframe>
+
+            <div class="track-info">
+
+                <span class="track-number">
+                    TRACK 01
+                </span>
+
+                <h3 class="track-title">
+                    SMITH - Submerged (Extended Mix)
+                </h3>
+
+                <p class="track-subtitle">
+                    Original Unreleased
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="track-card">
+
+            <iframe
+                class="soundcloud-player"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/smithdjofc/smith-projection-extended-mix&color=%23B6FF00&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+            </iframe>
+
+            <div class="track-info">
+
+                <span class="track-number">
+                    TRACK 02
+                </span>
+
+                <h3 class="track-title">
+                    SMITH - PROJECTION (Extended Mix)
+                </h3>
+
+                <p class="track-subtitle">
+                    Original Unreleased
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="track-card">
+
+            <iframe
+                class="soundcloud-player"
+                scrolling="no"
+                frameborder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/smithdjofc/smith-synergy-extended-mix&color=%23B6FF00&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+            </iframe>
+
+            <div class="track-info">
+
+                <span class="track-number">
+                    TRACK 03
+                </span>
+
+                <h3 class="track-title">
+                    SMITH - SYNERGY (Extended Mix)
+                </h3>
+
+                <p class="track-subtitle">
+                    Original Unreleased
+                </p>
+
+            </div>
+
         </div>
 
     </div>
@@ -1651,6 +1830,96 @@
 
         </div>
 
+
+        <!-- =================================================
+             VÍDEO 05
+        ================================================= -->
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <iframe
+                    id="youtube-video-5"
+                    title="SMITH - House Session EP #008"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-info">
+
+                <span class="video-number">
+                    VIDEO 05
+                </span>
+
+                <h3 class="video-title">
+                    SMITH - House Session EP #008
+                </h3>
+
+                <a
+                    id="youtube-link-5"
+                    href="https://www.youtube.com/watch?v=qHoC6896Ef0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-button">
+
+                    ASSISTIR NO YOUTUBE
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             VÍDEO 06
+        ================================================= -->
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <iframe
+                    id="youtube-video-6"
+                    title="SMITH - Progressive Journey"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-info">
+
+                <span class="video-number">
+                    VIDEO 06
+                </span>
+
+                <h3 class="video-title">
+                    SMITH - Progressive Journey
+                </h3>
+
+                <a
+                    id="youtube-link-6"
+                    href="https://youtu.be/g_CeSD084-g"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-button">
+
+                    ASSISTIR NO YOUTUBE
+
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
 </section>
@@ -1760,7 +2029,11 @@
 
         "https://www.youtube.com/watch?v=gRtEIcWHBqo",
 
-        "https://www.youtube.com/watch?v=RT5Cg265X88"
+        "https://www.youtube.com/watch?v=RT5Cg265X88",
+
+        "https://www.youtube.com/watch?v=qHoC6896Ef0",
+
+        "https://youtu.be/g_CeSD084-g"
 
     ];
 
