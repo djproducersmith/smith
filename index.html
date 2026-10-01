@@ -1,73 +1,63 @@
 ```html
-<!-- =====================================================
-     MENU
-===================================================== -->
+<a
+    href="#"
+    class="nav-logo">
 
-<nav>
+    <img
+        src="logo-felipe.png"
+        alt="Felipe Smith">
 
-    <a
-        href="#"
-        class="nav-logo">
+</a>
 
-        <img
-            src="logo-felipe.png"
-            alt="Felipe Smith">
+<button
+    class="menu-button"
+    onclick="toggleMenu()"
+    aria-label="Abrir menu">
 
+    ☰
+
+</button>
+
+<div
+    class="nav-links"
+    id="navLinks">
+
+    <a href="#about">
+        Sobre
     </a>
 
-    <button
-        class="menu-button"
-        onclick="toggleMenu()"
-        aria-label="Abrir menu">
+    <a href="#social">
+        Conecte-se
+    </a>
 
-        ☰
+    <a href="#tracks">
+        Tracks
+    </a>
 
-    </button>
+    <a href="#video">
+        Vídeo
+    </a>
 
-    <div
-        class="nav-links"
-        id="navLinks">
+    <a href="#music">
+        Música
+    </a>
 
-        <a href="#about">
-            Sobre
-        </a>
+    <a href="#experience">
+        Experiência
+    </a>
 
-        <a href="#social">
-            Conecte-se
-        </a>
+    <a href="#press">
+        Press Kit
+    </a>
 
-        <a href="#tracks">
-            Tracks
-        </a>
+    <a href="#contact">
+        Contato
+    </a>
 
-        <a href="#video">
-            Vídeo
-        </a>
+</div>
+```
 
-        <a href="#music">
-            Música
-        </a>
-
-        <a href="#experience">
-            Experiência
-        </a>
-
-        <a href="#press">
-            Press Kit
-        </a>
-
-        <a href="#contact">
-            Contato
-        </a>
-
-    </div>
-</nav>
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
+```html
 <div class="hero-content fade-in">
 
     <div class="hero-label">
@@ -119,12 +109,9 @@
         alt="Felipe Smith DJ">
 
 </div>
+```
 
-
-<!-- =====================================================
-     SOBRE
-===================================================== -->
-
+```html
 <div class="section-label">
     — Sobre
 </div>
@@ -179,12 +166,9 @@
     </div>
 
 </div>
+```
 
-
-<!-- =====================================================
-     CONECTE-SE
-===================================================== -->
-
+```html
 <div class="section-label">
     — Conecte-se
 </div>
@@ -236,12 +220,9 @@
     </a>
 
 </div>
+```
 
-
-<!-- =====================================================
-     TRACKS
-===================================================== -->
-
+```html
 <div class="section-label">
     — Tracks
 </div>
@@ -347,12 +328,9 @@
     </div>
 
 </div>
+```
 
-
-<!-- =====================================================
-     VÍDEO
-===================================================== -->
-
+```html
 <div class="section-label">
     — Vídeo
 </div>
@@ -468,7 +446,7 @@
 
             <a
                 id="youtube-link-3"
-                href="https://www.youtube.com/watch?v=BhiieiD2BtI"
+                href="https://youtu.be/UtoNuSLZ3WM?si=J0bsCe7gmsbRqSlU"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="youtube-button">
@@ -507,7 +485,7 @@
 
             <a
                 id="youtube-link-4"
-                href="https://www.youtube.com/watch?v=v0V72GxZNBU"
+                href="https://youtu.be/WxpU16UMScg?si=z0XRWsSp2D9RqsWN"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="youtube-button">
@@ -546,7 +524,7 @@
 
             <a
                 id="youtube-link-5"
-                href="https://www.youtube.com/watch?v=gRtEIcWHBqo"
+                href="https://www.youtube.com/watch?v=G_0yDw9Gb78&t=3411s"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="youtube-button">
@@ -585,7 +563,7 @@
 
             <a
                 id="youtube-link-6"
-                href="https://www.youtube.com/watch?v=RT5Cg265X88"
+                href="https://www.youtube.com/watch?v=BhiieiD2BtI"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="youtube-button">
@@ -716,12 +694,9 @@
     </div>
 
 </div>
+```
 
-
-<!-- =====================================================
-     ESTILOS
-===================================================== -->
-
+```html
 <div class="section-label">
     — Estilos
 </div>
@@ -764,12 +739,9 @@
     </div>
 
 </div>
+```
 
-
-<!-- =====================================================
-     EXPERIÊNCIA
-===================================================== -->
-
+```html
 <div class="section-label">
     — Experiência
 </div>
@@ -824,12 +796,9 @@
     </div>
 
 </div>
+```
 
-
-<!-- =====================================================
-     PRESS KIT
-===================================================== -->
-
+```html
 <div class="press-box">
 
     <div class="section-label">
@@ -871,12 +840,9 @@
     </div>
 
 </div>
+```
 
-
-<!-- =====================================================
-     CONTATO
-===================================================== -->
-
+```html
 <div class="contact">
 
     <div class="section-label">
@@ -902,12 +868,9 @@
     </a>
 
 </div>
+```
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
+```html
 <span>
     © 2026 Felipe Smith
 </span>
@@ -915,12 +878,9 @@
 <span>
     DJ & Producer
 </span>
+```
 
-
-<!-- =====================================================
-     RESPONSIVIDADE DOS VÍDEOS
-===================================================== -->
-
+```html
 <style>
 
 .video-grid {
@@ -944,11 +904,19 @@
     display: block;
 }
 
+.tracks-grid {
+    grid-template-columns: 1fr !important;
+}
+
 @media (max-width: 768px) {
 
     .video-grid {
         grid-template-columns: 1fr;
         gap: 25px;
+    }
+
+    .video-card {
+        width: 100%;
     }
 
 }
