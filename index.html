@@ -804,6 +804,14 @@
         margin-bottom: 18px;
     }
 
+    .video-views {
+        display: block;
+        color: var(--gray);
+        font-size: 11px;
+        margin-top: -8px;
+        margin-bottom: 18px;
+    }
+
     .youtube-button {
         display: inline-flex;
 
@@ -1062,11 +1070,23 @@
         }
 
         .video-grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
         }
 
         .video-info {
-            padding: 18px;
+            padding: 12px;
+        }
+
+        .video-title {
+            font-size: 14px;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .video-views {
+            font-size: 10px;
+            margin-bottom: 10px;
         }
 
         .youtube-button {
@@ -1139,12 +1159,7 @@
         <a href="#social">
             Conecte-se
         </a>
-
-        <a href="#video-2">
-            Vídeo
-        </a>
-
-        <a href="#music">
+<a href="#music">
             Estilos
         </a>
 
@@ -1424,8 +1439,7 @@
     </h2>
 
     <div class="video-grid">
-
-<div class="video-card">
+        <div class="video-card">
 
             <div class="video-container">
 
@@ -1441,12 +1455,20 @@
             </div>
 
             <div class="video-info">
-<h3 class="video-title">
-                    SMITH - Progressive Journey</h3>
+
+                <h3 class="video-title">
+                    SMITH - Progressive Journey
+                </h3>
+
+                <span
+                    id="youtube-views-1"
+                    class="video-views">
+                    Visualizações: —
+                </span>
 
                 <a
                     id="youtube-link-1"
-                    href="https://youtu.be/g_CeSD084-g"
+                    href="https://www.youtube.com/watch?v=g_CeSD084-g"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="youtube-button">
@@ -1459,7 +1481,7 @@
 
         </div>
 
-<div class="video-card">
+        <div class="video-card">
 
             <div class="video-container">
 
@@ -1475,8 +1497,16 @@
             </div>
 
             <div class="video-info">
-<h3 class="video-title">
-                    SMITH - House Session EP #008</h3>
+
+                <h3 class="video-title">
+                    SMITH - House Session EP #008
+                </h3>
+
+                <span
+                    id="youtube-views-2"
+                    class="video-views">
+                    Visualizações: —
+                </span>
 
                 <a
                     id="youtube-link-2"
@@ -1493,7 +1523,7 @@
 
         </div>
 
-<div class="video-card">
+        <div class="video-card">
 
             <div class="video-container">
 
@@ -1509,8 +1539,16 @@
             </div>
 
             <div class="video-info">
-<h3 class="video-title">
-                    SMITH - House Session EP #07</h3>
+
+                <h3 class="video-title">
+                    SMITH - House Session EP #07
+                </h3>
+
+                <span
+                    id="youtube-views-3"
+                    class="video-views">
+                    Visualizações: —
+                </span>
 
                 <a
                     id="youtube-link-3"
@@ -1527,7 +1565,7 @@
 
         </div>
 
-<div class="video-card">
+        <div class="video-card">
 
             <div class="video-container">
 
@@ -1543,8 +1581,16 @@
             </div>
 
             <div class="video-info">
-<h3 class="video-title">
-                    SMITH - House Session EP #06</h3>
+
+                <h3 class="video-title">
+                    SMITH - House Session EP #06
+                </h3>
+
+                <span
+                    id="youtube-views-4"
+                    class="video-views">
+                    Visualizações: —
+                </span>
 
                 <a
                     id="youtube-link-4"
@@ -1561,7 +1607,7 @@
 
         </div>
 
-<div class="video-card">
+        <div class="video-card">
 
             <div class="video-container">
 
@@ -1577,8 +1623,16 @@
             </div>
 
             <div class="video-info">
-<h3 class="video-title">
-                    SMITH - House Session EP #05</h3>
+
+                <h3 class="video-title">
+                    SMITH - House Session EP #05
+                </h3>
+
+                <span
+                    id="youtube-views-5"
+                    class="video-views">
+                    Visualizações: —
+                </span>
 
                 <a
                     id="youtube-link-5"
@@ -1595,7 +1649,7 @@
 
         </div>
 
-<div class="video-card">
+        <div class="video-card">
 
             <div class="video-container">
 
@@ -1611,8 +1665,16 @@
             </div>
 
             <div class="video-info">
-<h3 class="video-title">
-                    SMITH - House Session EP #04</h3>
+
+                <h3 class="video-title">
+                    SMITH - House Session EP #04
+                </h3>
+
+                <span
+                    id="youtube-views-6"
+                    class="video-views">
+                    Visualizações: —
+                </span>
 
                 <a
                     id="youtube-link-6"
@@ -1629,6 +1691,131 @@
 
         </div>
 
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <iframe
+                    id="youtube-video-7"
+                    title="SMITH - House Session EP #003"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-info">
+
+                <h3 class="video-title">
+                    SMITH - House Session EP #003
+                </h3>
+
+                <span
+                    id="youtube-views-7"
+                    class="video-views">
+                    Visualizações: —
+                </span>
+
+                <a
+                    id="youtube-link-7"
+                    href="https://www.youtube.com/watch?v=UtoNuSLZ3WM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-button">
+
+                    ASSISTIR NO YOUTUBE
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <iframe
+                    id="youtube-video-8"
+                    title="SMITH - House Session EP #002"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-info">
+
+                <h3 class="video-title">
+                    SMITH - House Session EP #002
+                </h3>
+
+                <span
+                    id="youtube-views-8"
+                    class="video-views">
+                    Visualizações: —
+                </span>
+
+                <a
+                    id="youtube-link-8"
+                    href="https://www.youtube.com/watch?v=WxpU16UMScg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-button">
+
+                    ASSISTIR NO YOUTUBE
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="video-card">
+
+            <div class="video-container">
+
+                <iframe
+                    id="youtube-video-9"
+                    title="SMITH - House Session EP #001"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-info">
+
+                <h3 class="video-title">
+                    SMITH - House Session EP #001
+                </h3>
+
+                <span
+                    id="youtube-views-9"
+                    class="video-views">
+                    Visualizações: —
+                </span>
+
+                <a
+                    id="youtube-link-9"
+                    href="https://www.youtube.com/watch?v=G_0yDw9Gb78"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-button">
+
+                    ASSISTIR NO YOUTUBE
+
+                </a>
+
+            </div>
+
+        </div>
     </div>
 
 </section>
@@ -1696,234 +1883,6 @@
 </section>
 
 
-<!-- =====================================================
-     VÍDEOS
-     IMPORTANTE:
-     Os vídeos são carregados automaticamente pelo JavaScript.
-===================================================== -->
-
-<section
-    id="video-2"
-    class="video-section">
-
-    <div class="section-label">
-        — Vídeo
-    </div>
-
-    <h2 class="section-title">
-        Smith<br>
-        Dj Set`s.
-    </h2>
-
-    <div class="video-grid">
-
-<div class="video-card">
-
-            <div class="video-container">
-
-                <iframe
-                    id="youtube-video-1"
-                    title="SMITH - Progressive Journey"
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-            <div class="video-info">
-<h3 class="video-title">
-                    SMITH - Progressive Journey</h3>
-
-                <a
-                    id="youtube-link-1"
-                    href="https://youtu.be/g_CeSD084-g"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="youtube-button">
-
-                    ASSISTIR NO YOUTUBE
-
-                </a>
-
-            </div>
-
-        </div>
-
-<div class="video-card">
-
-            <div class="video-container">
-
-                <iframe
-                    id="youtube-video-2"
-                    title="SMITH - House Session EP #008"
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-            <div class="video-info">
-<h3 class="video-title">
-                    SMITH - House Session EP #008</h3>
-
-                <a
-                    id="youtube-link-2"
-                    href="https://www.youtube.com/watch?v=qHoC6896Ef0"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="youtube-button">
-
-                    ASSISTIR NO YOUTUBE
-
-                </a>
-
-            </div>
-
-        </div>
-
-<div class="video-card">
-
-            <div class="video-container">
-
-                <iframe
-                    id="youtube-video-3"
-                    title="SMITH - House Session EP #07"
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-            <div class="video-info">
-<h3 class="video-title">
-                    SMITH - House Session EP #07</h3>
-
-                <a
-                    id="youtube-link-3"
-                    href="https://www.youtube.com/watch?v=BhiieiD2BtI"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="youtube-button">
-
-                    ASSISTIR NO YOUTUBE
-
-                </a>
-
-            </div>
-
-        </div>
-
-<div class="video-card">
-
-            <div class="video-container">
-
-                <iframe
-                    id="youtube-video-4"
-                    title="SMITH - House Session EP #06"
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-            <div class="video-info">
-<h3 class="video-title">
-                    SMITH - House Session EP #06</h3>
-
-                <a
-                    id="youtube-link-4"
-                    href="https://www.youtube.com/watch?v=v0V72GxZNBU"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="youtube-button">
-
-                    ASSISTIR NO YOUTUBE
-
-                </a>
-
-            </div>
-
-        </div>
-
-<div class="video-card">
-
-            <div class="video-container">
-
-                <iframe
-                    id="youtube-video-5"
-                    title="SMITH - House Session EP #05"
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-            <div class="video-info">
-<h3 class="video-title">
-                    SMITH - House Session EP #05</h3>
-
-                <a
-                    id="youtube-link-5"
-                    href="https://www.youtube.com/watch?v=gRtEIcWHBqo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="youtube-button">
-
-                    ASSISTIR NO YOUTUBE
-
-                </a>
-
-            </div>
-
-        </div>
-
-<div class="video-card">
-
-            <div class="video-container">
-
-                <iframe
-                    id="youtube-video-6"
-                    title="SMITH - House Session EP #04"
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-
-            </div>
-
-            <div class="video-info">
-<h3 class="video-title">
-                    SMITH - House Session EP #04</h3>
-
-                <a
-                    id="youtube-link-6"
-                    href="https://www.youtube.com/watch?v=RT5Cg265X88"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="youtube-button">
-
-                    ASSISTIR NO YOUTUBE
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 
 
 <!-- =====================================================
@@ -2166,7 +2125,13 @@
 
         "https://www.youtube.com/watch?v=gRtEIcWHBqo",
 
-        "https://www.youtube.com/watch?v=RT5Cg265X88"
+        "https://www.youtube.com/watch?v=RT5Cg265X88",
+
+        "https://www.youtube.com/watch?v=UtoNuSLZ3WM&t=3234s",
+
+        "https://www.youtube.com/watch?v=WxpU16UMScg&t=3389s",
+
+        "https://www.youtube.com/watch?v=G_0yDw9Gb78&t=3411s"
 
     ];
 
@@ -2301,11 +2266,9 @@
                         `youtube-link-${videoNumber}`
                     );
 
-
                 if (!iframe) {
                     return;
                 }
-
 
                 if (!videoID) {
 
@@ -2318,22 +2281,8 @@
 
                 }
 
-
-                /*
-                 * URL segura do player do YouTube.
-                 */
-
                 let embedURL =
                     `https://www.youtube-nocookie.com/embed/${videoID}?rel=0&modestbranding=1&playsinline=1`;
-
-
-                /*
-                 * Quando o site estiver hospedado,
-                 * enviamos a origem para o YouTube.
-                 *
-                 * Isso ajuda a evitar problemas de
-                 * configuração do player.
-                 */
 
                 if (
                     window.location.protocol === "http:" ||
@@ -2345,23 +2294,106 @@
 
                 }
 
-
                 iframe.src = embedURL;
 
-
-                /*
-                 * Botão "ASSISTIR NO YOUTUBE"
-                 */
-
                 if (youtubeButton) {
-
-                    youtubeButton.href =
-                        videoURL;
-
+                    youtubeButton.href = videoURL;
                 }
 
             }
         );
+
+        updateYouTubeViews();
+
+        /* Atualiza a contagem periodicamente. */
+        setInterval(updateYouTubeViews, 60000);
+
+    }
+
+
+    /* =====================================================
+       VISUALIZAÇÕES DO YOUTUBE
+
+       A Data API do YouTube fornece o statistics.viewCount.
+       Insira sua chave da YouTube Data API v3 abaixo.
+       A contagem é atualizada automaticamente a cada 60s.
+    ===================================================== */
+
+    const YOUTUBE_API_KEY = "COLE_SUA_CHAVE_DA_YOUTUBE_DATA_API_AQUI";
+
+    async function updateYouTubeViews() {
+
+        if (
+            !YOUTUBE_API_KEY ||
+            YOUTUBE_API_KEY === "COLE_SUA_CHAVE_DA_YOUTUBE_DATA_API_AQUI"
+        ) {
+            return;
+        }
+
+        const videoIDs = VIDEO_YOUTUBE
+            .map(getYouTubeID)
+            .filter(Boolean);
+
+        if (!videoIDs.length) {
+            return;
+        }
+
+        try {
+
+            const endpoint =
+                "https://www.googleapis.com/youtube/v3/videos" +
+                `?part=statistics&id=${videoIDs.join(",")}` +
+                `&key=${encodeURIComponent(YOUTUBE_API_KEY)}`;
+
+            const response = await fetch(endpoint);
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            const data = await response.json();
+
+            const viewsByID = {};
+
+            (data.items || []).forEach(video => {
+                viewsByID[video.id] =
+                    video.statistics && video.statistics.viewCount
+                        ? video.statistics.viewCount
+                        : null;
+            });
+
+            VIDEO_YOUTUBE.forEach((videoURL, index) => {
+
+                const videoID = getYouTubeID(videoURL);
+
+                const viewsElement =
+                    document.getElementById(
+                        `youtube-views-${index + 1}`
+                    );
+
+                if (!viewsElement || !videoID) {
+                    return;
+                }
+
+                const viewCount = viewsByID[videoID];
+
+                if (viewCount) {
+                    viewsElement.textContent =
+                        `Visualizações: ${Number(viewCount).toLocaleString("pt-BR")}`;
+                }
+
+            });
+
+        }
+
+        catch (error) {
+
+            console.error(
+                "Erro ao atualizar visualizações do YouTube:",
+                error
+            );
+
+        }
 
     }
 
