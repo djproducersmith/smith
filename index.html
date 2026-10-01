@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -662,11 +661,13 @@
 
     .tracks-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .track-card {
+        width: 100%;
+
         background: #090909;
         border: 1px solid #202020;
         border-radius: 10px;
@@ -779,20 +780,6 @@
         padding: 22px;
     }
 
-    .video-number {
-        display: block;
-
-        color: var(--green);
-
-        font-size: 10px;
-
-        font-weight: 700;
-
-        letter-spacing: 2px;
-
-        margin-bottom: 8px;
-    }
-
     .video-title {
         color: white;
 
@@ -800,7 +787,19 @@
 
         font-weight: 700;
 
+        margin-bottom: 10px;
+    }
+
+    .video-views {
+        display: block;
+
+        color: var(--gray);
+
+        font-size: 11px;
+
         margin-bottom: 18px;
+
+        letter-spacing: 0.5px;
     }
 
     .youtube-button {
@@ -1071,16 +1070,15 @@
             padding: 12px;
         }
 
-        .video-number {
-            font-size: 8px;
-            letter-spacing: 1px;
-            margin-bottom: 6px;
-        }
-
         .video-title {
             font-size: 12px;
             line-height: 1.3;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
+        }
+
+        .video-views {
+            font-size: 8px;
+            margin-bottom: 10px;
         }
 
         .youtube-button {
@@ -1346,6 +1344,16 @@
 
         </a>
 
+        <a
+            href="https://api.whatsapp.com/send/?phone=5541997921105&text&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social">
+
+            WhatsApp
+
+        </a>
+
     </div>
 
 </section>
@@ -1486,7 +1494,7 @@
     <div class="video-grid">
 
 
-        <!-- VIDEO 01 -->
+        <!-- PROGRESSIVE JOURNEY -->
 
         <div class="video-card">
 
@@ -1505,13 +1513,14 @@
 
             <div class="video-info">
 
-                <span class="video-number">
-                    VIDEO 01
-                </span>
-
                 <h3 class="video-title">
                     SMITH - Progressive Journey
                 </h3>
+
+                <span
+                    class="video-views"
+                    id="youtube-views-1">
+                </span>
 
                 <a
                     id="youtube-link-1"
@@ -1529,7 +1538,7 @@
         </div>
 
 
-        <!-- VIDEO 02 -->
+        <!-- HOUSE SESSION #008 -->
 
         <div class="video-card">
 
@@ -1548,13 +1557,14 @@
 
             <div class="video-info">
 
-                <span class="video-number">
-                    VIDEO 02
-                </span>
-
                 <h3 class="video-title">
                     SMITH - House Session EP #008
                 </h3>
+
+                <span
+                    class="video-views"
+                    id="youtube-views-2">
+                </span>
 
                 <a
                     id="youtube-link-2"
@@ -1572,7 +1582,7 @@
         </div>
 
 
-        <!-- VIDEO 03 -->
+        <!-- HOUSE SESSION #003 -->
 
         <div class="video-card">
 
@@ -1591,13 +1601,14 @@
 
             <div class="video-info">
 
-                <span class="video-number">
-                    VIDEO 03
-                </span>
-
                 <h3 class="video-title">
                     SMITH - House Session EP #003
                 </h3>
+
+                <span
+                    class="video-views"
+                    id="youtube-views-3">
+                </span>
 
                 <a
                     id="youtube-link-3"
@@ -1615,7 +1626,7 @@
         </div>
 
 
-        <!-- VIDEO 04 -->
+        <!-- HOUSE SESSION #002 -->
 
         <div class="video-card">
 
@@ -1634,13 +1645,14 @@
 
             <div class="video-info">
 
-                <span class="video-number">
-                    VIDEO 04
-                </span>
-
                 <h3 class="video-title">
                     SMITH - House Session EP #002
                 </h3>
+
+                <span
+                    class="video-views"
+                    id="youtube-views-4">
+                </span>
 
                 <a
                     id="youtube-link-4"
@@ -1658,7 +1670,7 @@
         </div>
 
 
-        <!-- VIDEO 05 -->
+        <!-- HOUSE SESSION #001 -->
 
         <div class="video-card">
 
@@ -1677,13 +1689,14 @@
 
             <div class="video-info">
 
-                <span class="video-number">
-                    VIDEO 05
-                </span>
-
                 <h3 class="video-title">
                     SMITH - House Session EP #001
                 </h3>
+
+                <span
+                    class="video-views"
+                    id="youtube-views-5">
+                </span>
 
                 <a
                     id="youtube-link-5"
@@ -1701,7 +1714,7 @@
         </div>
 
 
-        <!-- VIDEO 06 -->
+        <!-- VÍDEO 06 -->
 
         <div class="video-card">
 
@@ -1709,7 +1722,7 @@
 
                 <iframe
                     id="youtube-video-6"
-                    title="Felipe Smith - Vídeo 06"
+                    title="Felipe Smith"
                     loading="lazy"
                     referrerpolicy="strict-origin-when-cross-origin"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1720,13 +1733,14 @@
 
             <div class="video-info">
 
-                <span class="video-number">
-                    VIDEO 06
-                </span>
-
                 <h3 class="video-title">
                     Felipe Smith
                 </h3>
+
+                <span
+                    class="video-views"
+                    id="youtube-views-6">
+                </span>
 
                 <a
                     id="youtube-link-6"
@@ -1744,7 +1758,7 @@
         </div>
 
 
-        <!-- VIDEO 07 -->
+        <!-- VÍDEO 07 -->
 
         <div class="video-card">
 
@@ -1752,7 +1766,7 @@
 
                 <iframe
                     id="youtube-video-7"
-                    title="Felipe Smith - Vídeo 07"
+                    title="Felipe Smith"
                     loading="lazy"
                     referrerpolicy="strict-origin-when-cross-origin"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1763,13 +1777,14 @@
 
             <div class="video-info">
 
-                <span class="video-number">
-                    VIDEO 07
-                </span>
-
                 <h3 class="video-title">
                     Felipe Smith
                 </h3>
+
+                <span
+                    class="video-views"
+                    id="youtube-views-7">
+                </span>
 
                 <a
                     id="youtube-link-7"
@@ -1787,7 +1802,7 @@
         </div>
 
 
-        <!-- VIDEO 08 -->
+        <!-- VÍDEO 08 -->
 
         <div class="video-card">
 
@@ -1795,7 +1810,7 @@
 
                 <iframe
                     id="youtube-video-8"
-                    title="Felipe Smith - Vídeo 08"
+                    title="Felipe Smith"
                     loading="lazy"
                     referrerpolicy="strict-origin-when-cross-origin"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1806,13 +1821,14 @@
 
             <div class="video-info">
 
-                <span class="video-number">
-                    VIDEO 08
-                </span>
-
                 <h3 class="video-title">
                     Felipe Smith
                 </h3>
+
+                <span
+                    class="video-views"
+                    id="youtube-views-8">
+                </span>
 
                 <a
                     id="youtube-link-8"
@@ -1830,7 +1846,7 @@
         </div>
 
 
-        <!-- VIDEO 09 -->
+        <!-- VÍDEO 09 -->
 
         <div class="video-card">
 
@@ -1838,7 +1854,7 @@
 
                 <iframe
                     id="youtube-video-9"
-                    title="Felipe Smith - Vídeo 09"
+                    title="Felipe Smith"
                     loading="lazy"
                     referrerpolicy="strict-origin-when-cross-origin"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1849,13 +1865,14 @@
 
             <div class="video-info">
 
-                <span class="video-number">
-                    VIDEO 09
-                </span>
-
                 <h3 class="video-title">
                     Felipe Smith
                 </h3>
+
+                <span
+                    class="video-views"
+                    id="youtube-views-9">
+                </span>
 
                 <a
                     id="youtube-link-9"
@@ -2131,8 +2148,6 @@
     }
 
 
-    /* Fecha o menu ao clicar em um link */
-
     document
         .querySelectorAll(".nav-links a")
         .forEach(link => {
@@ -2150,6 +2165,13 @@
 
     /* =====================================================
        VÍDEOS DO YOUTUBE
+       ORDEM:
+       PROGRESSIVE JOURNEY
+       HOUSE SESSION #008
+       HOUSE SESSION #003
+       HOUSE SESSION #002
+       HOUSE SESSION #001
+       DEMAIS VÍDEOS
     ===================================================== */
 
     const VIDEO_YOUTUBE = [
@@ -2176,7 +2198,7 @@
 
 
     /* =====================================================
-       CONVERTER QUALQUER LINK DO YOUTUBE PARA ID
+       CONVERTER LINK DO YOUTUBE PARA ID
     ===================================================== */
 
     function getYouTubeID(url) {
@@ -2209,7 +2231,6 @@
                     return videoID;
                 }
 
-
                 if (
                     urlObject.pathname.startsWith("/shorts/")
                 ) {
@@ -2219,7 +2240,6 @@
                         .split("/")[0];
 
                 }
-
 
                 if (
                     urlObject.pathname.startsWith("/embed/")
@@ -2336,6 +2356,106 @@
 
 
     /* =====================================================
+       VISUALIZAÇÕES DO YOUTUBE
+       
+       O YouTube exige uma API KEY para fornecer
+       publicamente a quantidade de visualizações.
+       
+       Cole sua chave da YouTube Data API v3 abaixo
+       para ativar a atualização automática.
+    ===================================================== */
+
+    const YOUTUBE_API_KEY = "";
+
+
+    async function updateYouTubeViews() {
+
+        if (!YOUTUBE_API_KEY) {
+            return;
+        }
+
+        const videoIDs =
+            VIDEO_YOUTUBE
+                .map(getYouTubeID)
+                .filter(Boolean)
+                .join(",");
+
+
+        if (!videoIDs) {
+            return;
+        }
+
+
+        try {
+
+            const response =
+                await fetch(
+                    `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${videoIDs}&key=${YOUTUBE_API_KEY}`
+                );
+
+
+            if (!response.ok) {
+                throw new Error(
+                    "Erro ao consultar YouTube API."
+                );
+            }
+
+
+            const data =
+                await response.json();
+
+
+            data.items.forEach(item => {
+
+                const index =
+                    VIDEO_YOUTUBE.findIndex(
+                        url =>
+                            getYouTubeID(url) === item.id
+                    );
+
+
+                if (index === -1) {
+                    return;
+                }
+
+
+                const viewsElement =
+                    document.getElementById(
+                        `youtube-views-${index + 1}`
+                    );
+
+
+                if (!viewsElement) {
+                    return;
+                }
+
+
+                const views =
+                    Number(
+                        item.statistics.viewCount || 0
+                    );
+
+
+                viewsElement.textContent =
+                    `${views.toLocaleString("pt-BR")} visualizações`;
+
+            });
+
+        }
+
+        catch (error) {
+
+            console.error(
+                "Erro ao carregar visualizações do YouTube:",
+                error
+            );
+
+        }
+
+    }
+
+
+    /* =====================================================
        INICIALIZAÇÃO
     ===================================================== */
 
@@ -2344,9 +2464,25 @@
         setupYouTubeVideos
     );
 
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        updateYouTubeViews
+    );
+
+
+    /*
+       Atualiza as visualizações periodicamente.
+       O YouTube pode aplicar cache e limites da API.
+    */
+
+    setInterval(
+        updateYouTubeViews,
+        60000
+    );
+
 </script>
 
 </body>
 
 </html>
-```
