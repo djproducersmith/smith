@@ -7,24 +7,28 @@
 <meta charset="UTF-8">
 
 <meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
+ name="viewport"
+ content="width=device-width, initial-scale=1.0">
 
 <meta
-name="referrer"
-content="strict-origin-when-cross-origin">
+ name="referrer"
+ content="strict-origin-when-cross-origin">
 
 <title>Felipe Smith | DJ & Producer</title>
 
 <meta
-name="description"
-content="Felipe Smith — DJ & Producer | Afro House, Deep House, Progressive House e Melodic Techno">
+ name="description"
+ content="Felipe Smith — DJ & Producer | Afro House, Deep House, Progressive House e Melodic Techno">
 
 <meta
-name="theme-color"
-content="#050505">
+ name="theme-color"
+ content="#050505">
 
 <style>
+
+    /* =====================================================
+       CONFIGURAÇÕES GERAIS
+    ===================================================== */
 
     :root {
         --black: #050505;
@@ -114,19 +118,11 @@ content="#050505">
         z-index: 999;
     }
 
-    .nav-logo {
-        display: flex;
-        align-items: center;
-        height: 100%;
-    }
-
     .nav-logo img {
-        width: auto;
         height: 45px;
-        max-width: 180px;
-        object-fit: contain;
-        object-position: center;
+        width: auto;
         display: block;
+        object-fit: contain;
     }
 
     .nav-links {
@@ -303,10 +299,7 @@ content="#050505">
         align-items: center;
         justify-content: center;
 
-        width: 100%;
         min-height: 600px;
-
-        overflow: hidden;
     }
 
     .hero-photo::before {
@@ -327,16 +320,13 @@ content="#050505">
     }
 
     .hero-photo img {
-        display: block;
+        max-width: 100%;
+        max-height: 650px;
 
-        width: min(100%, 520px);
-        height: 600px;
-
-        max-width: 520px;
-        max-height: 600px;
+        width: auto;
+        height: auto;
 
         object-fit: contain;
-        object-position: center;
 
         filter:
             drop-shadow(0 25px 40px rgba(0,0,0,0.8))
@@ -714,16 +704,10 @@ content="#050505">
     }
 
     .soundcloud-player {
-        display: block;
-
         width: 100%;
         height: 166px;
-
         border: 0;
-
-        aspect-ratio: 16 / 9;
-
-        background: #000;
+        display: block;
     }
 
     /* =====================================================
@@ -736,27 +720,17 @@ content="#050505">
 
     .video-grid {
         display: grid;
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
+        grid-template-columns: repeat(2, 1fr);
         gap: 25px;
-
-        align-items: start;
     }
 
     .video-card {
-        width: 100%;
-        min-width: 0;
-
         background: #090909;
-
         border: 1px solid #202020;
-
         border-radius: 10px;
-
         overflow: hidden;
-
         transition: 0.35s;
+        min-width: 0;
     }
 
     .video-card:hover {
@@ -783,13 +757,8 @@ content="#050505">
     .video-container iframe {
         position: absolute;
 
-        display: block;
-
         width: 100%;
         height: 100%;
-
-        min-width: 0;
-        min-height: 0;
 
         top: 0;
         left: 0;
@@ -799,12 +768,6 @@ content="#050505">
 
     .video-info {
         padding: 22px;
-
-        min-height: 145px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     .video-number {
@@ -827,8 +790,6 @@ content="#050505">
         font-size: 18px;
 
         font-weight: 700;
-
-        line-height: 1.3;
 
         margin-bottom: 18px;
     }
@@ -918,7 +879,7 @@ content="#050505">
     }
 
     /* =====================================================
-       ANIMAÇÃO
+       ANIMAÇÃO DE ENTRADA
     ===================================================== */
 
     .fade-in {
@@ -964,9 +925,6 @@ content="#050505">
         }
 
         .hero-photo img {
-            width: min(100%, 480px);
-            height: 550px;
-            max-width: 480px;
             max-height: 550px;
         }
 
@@ -981,10 +939,6 @@ content="#050505">
 
         .experience {
             grid-template-columns: 1fr;
-        }
-
-        .video-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .tracks-grid {
@@ -1005,10 +959,7 @@ content="#050505">
         }
 
         .nav-logo img {
-            width: auto;
             height: 38px;
-            max-width: 150px;
-            object-fit: contain;
         }
 
         .nav-links {
@@ -1096,82 +1047,35 @@ content="#050505">
             text-align: center;
         }
 
-        /* =================================================
-           VÍDEOS — PADRÃO 16:9
-        ================================================= */
+        /* 2 VÍDEOS LADO A LADO NO CELULAR */
 
         .video-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 10px;
-            width: 100%;
-        }
-
-        .video-card {
-            width: 100%;
-            min-width: 0;
-        }
-
-        .video-container {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            height: auto;
         }
 
         .video-info {
             padding: 12px;
-            min-height: 125px;
         }
 
         .video-number {
             font-size: 8px;
             letter-spacing: 1px;
+            margin-bottom: 6px;
         }
 
         .video-title {
             font-size: 12px;
             line-height: 1.3;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .youtube-button {
             width: 100%;
             min-height: 36px;
-            padding: 0 6px;
+            padding: 0 5px;
             font-size: 8px;
-            letter-spacing: 0.7px;
-        }
-
-        /* =================================================
-           FOTO PRINCIPAL — PADRÃO NO CELULAR
-        ================================================= */
-
-        .hero-photo {
-            width: 100%;
-            min-height: 0;
-            height: auto;
-        }
-
-        .hero-photo img {
-            display: block;
-
-            width: min(100%, 360px);
-            height: 440px;
-
-            max-width: 360px;
-            max-height: 440px;
-
-            object-fit: contain;
-            object-position: center;
-        }
-
-        /* =================================================
-           TRACKS
-        ================================================= */
-
-        .soundcloud-player {
-            width: 100%;
-            height: 166px;
-            aspect-ratio: auto;
+            letter-spacing: 0.5px;
         }
 
         .contact h2 {
@@ -1198,68 +1102,66 @@ content="#050505">
 
 <nav>
 
+```
 <a
- href="#"
- class="nav-logo">
+    href="#"
+    class="nav-logo">
 
-```
-<img
-    src="logo-felipe.png"
-    alt="Felipe Smith">
-```
+    <img
+        src="logo-felipe.png"
+        alt="Felipe Smith">
 
 </a>
 
-<button
- class="menu-button"
- onclick="toggleMenu()"
- aria-label="Abrir menu">
 
-```
-☰
-```
+<button
+    class="menu-button"
+    onclick="toggleMenu()"
+    aria-label="Abrir menu">
+
+    ☰
 
 </button>
+
 
 <div
     class="nav-links"
     id="navLinks">
 
-```
-<a href="#about">
-    Sobre
-</a>
+    <a href="#about">
+        Sobre
+    </a>
 
-<a href="#social">
-    Conecte-se
-</a>
+    <a href="#social">
+        Conecte-se
+    </a>
 
-<a href="#tracks">
-    Tracks
-</a>
+    <a href="#tracks">
+        Tracks
+    </a>
 
-<a href="#video">
-    Vídeo
-</a>
+    <a href="#video">
+        Vídeo
+    </a>
 
-<a href="#music">
-    Música
-</a>
+    <a href="#music">
+        Música
+    </a>
 
-<a href="#experience">
-    Experiência
-</a>
+    <a href="#experience">
+        Experiência
+    </a>
 
-<a href="#press">
-    Press Kit
-</a>
+    <a href="#press">
+        Press Kit
+    </a>
 
-<a href="#contact">
-    Contato
-</a>
-```
+    <a href="#contact">
+        Contato
+    </a>
 
 </div>
+```
 
 </nav>
 
@@ -1269,61 +1171,60 @@ content="#050505">
 
 <header class="hero">
 
+```
 <div class="hero-content fade-in">
 
-```
-<div class="hero-label">
-    DJ & Produtor
-</div>
+    <div class="hero-label">
+        DJ & Produtor
+    </div>
 
-<h1>
-    FELIPE
-    <span>
-        SMITH
-    </span>
-</h1>
+    <h1>
+        FELIPE
+        <span>
+            SMITH
+        </span>
+    </h1>
 
-<p class="hero-description">
-    DJ e produtor Curitibano, traz uma
-    experiência musical que conecta House,
-    Techno e suas vertentes.
-</p>
+    <p class="hero-description">
+        DJ e produtor Curitibano, traz uma
+        experiência musical que conecta House,
+        Techno e suas vertentes.
+    </p>
 
-<div class="hero-buttons">
+    <div class="hero-buttons">
 
-    <a
-        href="press-kit.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="button button-primary">
+        <a
+            href="press-kit.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-primary">
 
-        VER PRESS KIT
+            VER PRESS KIT
 
-    </a>
+        </a>
 
-    <a
-        href="press-kit.pdf"
-        download="djsmith.pdf"
-        class="button button-secondary">
+        <a
+            href="press-kit.pdf"
+            download="djsmith.pdf"
+            class="button button-secondary">
 
-        BAIXAR PDF
+            BAIXAR PDF
 
-    </a>
+        </a>
 
-</div>
-```
+    </div>
 
 </div>
+
 
 <div class="hero-photo fade-in">
 
-```
-<img
-    src="foto-felipe.png"
-    alt="Felipe Smith DJ">
-```
+    <img
+        src="foto-felipe.png"
+        alt="Felipe Smith DJ">
 
 </div>
+```
 
 </header>
 
@@ -1333,8 +1234,9 @@ content="#050505">
 
 <section id="about">
 
+```
 <div class="section-label">
-    — Sobre
+     — Sobre
 </div>
 
 <h2 class="section-title">
@@ -1344,60 +1246,61 @@ content="#050505">
 
 <div class="bio-grid">
 
+    <div>
+
+        <p class="bio-highlight">
+
+            Felipe Gabriel Smith 23 Anos.<br>
+            São José dos Pinhais, PR, Brasil.<br>
+            Formado como DJ &amp; Produtor pela AIMEC Curitiba.
+
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <p class="bio-text">
+
+            Com uma identidade musical voltada
+            para a House Music, Smith transita
+            por diferentes vertentes da música
+            eletrônica, explorando grooves,
+            atmosferas e elementos que conectam
+            o público à pista.
+
+            <br><br>
+
+            Seu repertório passeia por House,
+            Afro House, Progressive House e Deep House e
+            Melodic Techno, permitindo construir sets que vão
+            do warm-up a momentos de maior
+            intensidade.
+
+            <br><br>
+
+            Sets envolventes, Smith tem um jeito
+            sutil de elevar a energia da festa,
+            explorando e transitando entre
+            Techno, House e suas vertentes.
+
+        </p>
+
+    </div>
+
+</div>
 ```
-<div>
-
-    <p class="bio-highlight">
-
-        Felipe Gabriel Smith 23 Anos.<br>
-        São José dos Pinhais, PR, Brasil.<br>
-        Formado como DJ &amp; Produtor pela AIMEC Curitiba.
-
-    </p>
-
-</div>
-
-<div>
-
-    <p class="bio-text">
-
-        Com uma identidade musical voltada
-        para a House Music, Smith transita
-        por diferentes vertentes da música
-        eletrônica, explorando grooves,
-        atmosferas e elementos que conectam
-        o público à pista.
-
-        <br><br>
-
-        Seu repertório passeia por House,
-        Afro House, Progressive House e Deep House e
-        Melodic Techno, permitindo construir sets que vão
-        do warm-up a momentos de maior
-        intensidade.
-
-        <br><br>
-
-        Sets envolventes, Smith tem um jeito
-        sutil de elevar a energia da festa,
-        explorando e transitando entre
-        Techno, House e suas vertentes.
-
-    </p>
-
-</div>
-```
-
-</div>
 
 </section>
 
 <!-- =====================================================
-     REDES SOCIAIS
+     CONECTE-SE
 ===================================================== -->
 
 <section id="social">
 
+```
 <div class="section-label">
     — Conecte-se
 </div>
@@ -1408,39 +1311,48 @@ content="#050505">
 
 <div class="socials">
 
-```
-<a
-    href="https://www.instagram.com/djsmith____/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="social">
+    <a
+        href="https://www.instagram.com/djsmith____/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social">
 
-    Instagram
+        Instagram
 
-</a>
+    </a>
 
-<a
-    href="https://www.youtube.com/@smithdjofc"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="social">
+    <a
+        href="https://www.youtube.com/@smithdjofc"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social">
 
-    YouTube
+        YouTube
 
-</a>
+    </a>
 
-<a
-    href="https://soundcloud.com/smithdjofc"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="social">
+    <a
+        href="https://soundcloud.com/smithdjofc"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social">
 
-    SoundCloud
+        SoundCloud
 
-</a>
-```
+    </a>
+
+    <a
+        href="https://wa.me/5541997921105"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social">
+
+        WhatsApp
+
+    </a>
 
 </div>
+```
 
 </section>
 
@@ -1450,6 +1362,7 @@ content="#050505">
 
 <section id="tracks" class="tracks-section">
 
+```
 <div class="section-label">
     — Tracks
 </div>
@@ -1461,102 +1374,101 @@ content="#050505">
 
 <p class="bio-text" style="max-width: 700px; margin-bottom: 45px;">
 
-```
-Uma seleção de produções autorais ainda não lançadas oficialmente,
-representando a direção sonora e o nível de produção atual de Smith.
-```
+    Uma seleção de produções autorais ainda não lançadas oficialmente,
+    representando a direção sonora e o nível de produção atual de Smith.
 
 </p>
 
 <div class="tracks-grid">
 
+    <div class="track-card">
+
+        <iframe
+            class="soundcloud-player"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/smithdjofc/smith-submerged-extended-mix&color=%23B6FF00&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+        </iframe>
+
+        <div class="track-info">
+
+            <span class="track-number">
+                TRACK 01
+            </span>
+
+            <h3 class="track-title">
+                SMITH - Submerged (Extended Mix)
+            </h3>
+
+            <p class="track-subtitle">
+                Original Unreleased
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="track-card">
+
+        <iframe
+            class="soundcloud-player"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/smithdjofc/smith-projection-extended-mix&color=%23B6FF00&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+        </iframe>
+
+        <div class="track-info">
+
+            <span class="track-number">
+                TRACK 02
+            </span>
+
+            <h3 class="track-title">
+                SMITH - PROJECTION (Extended Mix)
+            </h3>
+
+            <p class="track-subtitle">
+                Original Unreleased
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="track-card">
+
+        <iframe
+            class="soundcloud-player"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/smithdjofc/smith-synergy-extended-mix&color=%23B6FF00&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
+        </iframe>
+
+        <div class="track-info">
+
+            <span class="track-number">
+                TRACK 03
+            </span>
+
+            <h3 class="track-title">
+                SMITH - SYNERGY (Extended Mix)
+            </h3>
+
+            <p class="track-subtitle">
+                Original Unreleased
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 ```
-<div class="track-card">
-
-    <iframe
-        class="soundcloud-player"
-        scrolling="no"
-        frameborder="no"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/smithdjofc/smith-submerged-extended-mix&color=%23B6FF00&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
-    </iframe>
-
-    <div class="track-info">
-
-        <span class="track-number">
-            TRACK 01
-        </span>
-
-        <h3 class="track-title">
-            SMITH - Submerged (Extended Mix)
-        </h3>
-
-        <p class="track-subtitle">
-            Original Unreleased
-        </p>
-
-    </div>
-
-</div>
-
-<div class="track-card">
-
-    <iframe
-        class="soundcloud-player"
-        scrolling="no"
-        frameborder="no"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/smithdjofc/smith-projection-extended-mix&color=%23B6FF00&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
-    </iframe>
-
-    <div class="track-info">
-
-        <span class="track-number">
-            TRACK 02
-        </span>
-
-        <h3 class="track-title">
-            SMITH - PROJECTION (Extended Mix)
-        </h3>
-
-        <p class="track-subtitle">
-            Original Unreleased
-        </p>
-
-    </div>
-
-</div>
-
-<div class="track-card">
-
-    <iframe
-        class="soundcloud-player"
-        scrolling="no"
-        frameborder="no"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/smithdjofc/smith-synergy-extended-mix&color=%23B6FF00&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false">
-    </iframe>
-
-    <div class="track-info">
-
-        <span class="track-number">
-            TRACK 03
-        </span>
-
-        <h3 class="track-title">
-            SMITH - SYNERGY (Extended Mix)
-        </h3>
-
-        <p class="track-subtitle">
-            Original Unreleased
-        </p>
-
-    </div>
-
-</div>
-```
-
-</div>
 
 </section>
 
@@ -1568,389 +1480,417 @@ representando a direção sonora e o nível de produção atual de Smith.
     id="video"
     class="video-section">
 
+```
 <div class="section-label">
     — Vídeo
 </div>
 
 <h2 class="section-title">
     Smith<br>
-    DJ Sets.
+    Dj Set`s.
 </h2>
 
 <div class="video-grid">
 
+
+    <!-- VIDEO 01 -->
+
+    <div class="video-card">
+
+        <div class="video-container">
+
+            <iframe
+                id="youtube-video-1"
+                title="SMITH - Progressive Journey"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="video-info">
+
+            <span class="video-number">
+                VIDEO 01
+            </span>
+
+            <h3 class="video-title">
+                SMITH - Progressive Journey
+            </h3>
+
+            <a
+                id="youtube-link-1"
+                href="https://youtu.be/g_CeSD084-g"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="youtube-button">
+
+                ASSISTIR NO YOUTUBE
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO 02 -->
+
+    <div class="video-card">
+
+        <div class="video-container">
+
+            <iframe
+                id="youtube-video-2"
+                title="SMITH - House Session EP #008"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="video-info">
+
+            <span class="video-number">
+                VIDEO 02
+            </span>
+
+            <h3 class="video-title">
+                SMITH - House Session EP #008
+            </h3>
+
+            <a
+                id="youtube-link-2"
+                href="https://www.youtube.com/watch?v=qHoC6896Ef0"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="youtube-button">
+
+                ASSISTIR NO YOUTUBE
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO 03 -->
+
+    <div class="video-card">
+
+        <div class="video-container">
+
+            <iframe
+                id="youtube-video-3"
+                title="SMITH - House Session EP #003"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="video-info">
+
+            <span class="video-number">
+                VIDEO 03
+            </span>
+
+            <h3 class="video-title">
+                SMITH - House Session EP #003
+            </h3>
+
+            <a
+                id="youtube-link-3"
+                href="https://youtu.be/UtoNuSLZ3WM?si=J0bsCe7gmsbRqSlU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="youtube-button">
+
+                ASSISTIR NO YOUTUBE
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO 04 -->
+
+    <div class="video-card">
+
+        <div class="video-container">
+
+            <iframe
+                id="youtube-video-4"
+                title="SMITH - House Session EP #002"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="video-info">
+
+            <span class="video-number">
+                VIDEO 04
+            </span>
+
+            <h3 class="video-title">
+                SMITH - House Session EP #002
+            </h3>
+
+            <a
+                id="youtube-link-4"
+                href="https://youtu.be/WxpU16UMScg?si=z0XRWsSp2D9RqsWN"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="youtube-button">
+
+                ASSISTIR NO YOUTUBE
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO 05 -->
+
+    <div class="video-card">
+
+        <div class="video-container">
+
+            <iframe
+                id="youtube-video-5"
+                title="SMITH - House Session EP #001"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="video-info">
+
+            <span class="video-number">
+                VIDEO 05
+            </span>
+
+            <h3 class="video-title">
+                SMITH - House Session EP #001
+            </h3>
+
+            <a
+                id="youtube-link-5"
+                href="https://www.youtube.com/watch?v=G_0yDw9Gb78&t=3411s"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="youtube-button">
+
+                ASSISTIR NO YOUTUBE
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO 06 -->
+
+    <div class="video-card">
+
+        <div class="video-container">
+
+            <iframe
+                id="youtube-video-6"
+                title="Felipe Smith - Vídeo 06"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="video-info">
+
+            <span class="video-number">
+                VIDEO 06
+            </span>
+
+            <h3 class="video-title">
+                Felipe Smith
+            </h3>
+
+            <a
+                id="youtube-link-6"
+                href="https://www.youtube.com/watch?v=BhiieiD2BtI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="youtube-button">
+
+                ASSISTIR NO YOUTUBE
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO 07 -->
+
+    <div class="video-card">
+
+        <div class="video-container">
+
+            <iframe
+                id="youtube-video-7"
+                title="Felipe Smith - Vídeo 07"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="video-info">
+
+            <span class="video-number">
+                VIDEO 07
+            </span>
+
+            <h3 class="video-title">
+                Felipe Smith
+            </h3>
+
+            <a
+                id="youtube-link-7"
+                href="https://www.youtube.com/watch?v=v0V72GxZNBU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="youtube-button">
+
+                ASSISTIR NO YOUTUBE
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO 08 -->
+
+    <div class="video-card">
+
+        <div class="video-container">
+
+            <iframe
+                id="youtube-video-8"
+                title="Felipe Smith - Vídeo 08"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="video-info">
+
+            <span class="video-number">
+                VIDEO 08
+            </span>
+
+            <h3 class="video-title">
+                Felipe Smith
+            </h3>
+
+            <a
+                id="youtube-link-8"
+                href="https://www.youtube.com/watch?v=gRtEIcWHBqo"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="youtube-button">
+
+                ASSISTIR NO YOUTUBE
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- VIDEO 09 -->
+
+    <div class="video-card">
+
+        <div class="video-container">
+
+            <iframe
+                id="youtube-video-9"
+                title="Felipe Smith - Vídeo 09"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <div class="video-info">
+
+            <span class="video-number">
+                VIDEO 09
+            </span>
+
+            <h3 class="video-title">
+                Felipe Smith
+            </h3>
+
+            <a
+                id="youtube-link-9"
+                href="https://www.youtube.com/watch?v=RT5Cg265X88"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="youtube-button">
+
+                ASSISTIR NO YOUTUBE
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
 ```
-<div class="video-card">
-
-    <div class="video-container">
-
-        <iframe
-            id="youtube-video-1"
-            title="SMITH - Progressive Journey"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-    <div class="video-info">
-
-        <span class="video-number">
-            VIDEO 01
-        </span>
-
-        <h3 class="video-title">
-            SMITH - Progressive Journey
-        </h3>
-
-        <a
-            id="youtube-link-1"
-            href="https://youtu.be/g_CeSD084-g"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="youtube-button">
-
-            ASSISTIR NO YOUTUBE
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="video-card">
-
-    <div class="video-container">
-
-        <iframe
-            id="youtube-video-2"
-            title="SMITH - House Session EP #008"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-    <div class="video-info">
-
-        <span class="video-number">
-            VIDEO 02
-        </span>
-
-        <h3 class="video-title">
-            SMITH - House Session EP #008
-        </h3>
-
-        <a
-            id="youtube-link-2"
-            href="https://www.youtube.com/watch?v=qHoC6896Ef0"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="youtube-button">
-
-            ASSISTIR NO YOUTUBE
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="video-card">
-
-    <div class="video-container">
-
-        <iframe
-            id="youtube-video-3"
-            title="SMITH - House Session EP #003"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-    <div class="video-info">
-
-        <span class="video-number">
-            VIDEO 03
-        </span>
-
-        <h3 class="video-title">
-            SMITH - House Session EP #003
-        </h3>
-
-        <a
-            id="youtube-link-3"
-            href="https://youtu.be/UtoNuSLZ3WM?si=J0bsCe7gmsbRqSlU"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="youtube-button">
-
-            ASSISTIR NO YOUTUBE
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="video-card">
-
-    <div class="video-container">
-
-        <iframe
-            id="youtube-video-4"
-            title="SMITH - House Session EP #002"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-    <div class="video-info">
-
-        <span class="video-number">
-            VIDEO 04
-        </span>
-
-        <h3 class="video-title">
-            SMITH - House Session EP #002
-        </h3>
-
-        <a
-            id="youtube-link-4"
-            href="https://youtu.be/WxpU16UMScg?si=z0XRWsSp2D9RqsWN"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="youtube-button">
-
-            ASSISTIR NO YOUTUBE
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="video-card">
-
-    <div class="video-container">
-
-        <iframe
-            id="youtube-video-5"
-            title="SMITH - House Session EP #001"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-    <div class="video-info">
-
-        <span class="video-number">
-            VIDEO 05
-        </span>
-
-        <h3 class="video-title">
-            SMITH - House Session EP #001
-        </h3>
-
-        <a
-            id="youtube-link-5"
-            href="https://www.youtube.com/watch?v=G_0yDw9Gb78&t=3411s"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="youtube-button">
-
-            ASSISTIR NO YOUTUBE
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="video-card">
-
-    <div class="video-container">
-
-        <iframe
-            id="youtube-video-6"
-            title="Felipe Smith - Vídeo 06"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-    <div class="video-info">
-
-        <span class="video-number">
-            VIDEO 06
-        </span>
-
-        <h3 class="video-title">
-            Felipe Smith
-        </h3>
-
-        <a
-            id="youtube-link-6"
-            href="https://www.youtube.com/watch?v=BhiieiD2BtI"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="youtube-button">
-
-            ASSISTIR NO YOUTUBE
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="video-card">
-
-    <div class="video-container">
-
-        <iframe
-            id="youtube-video-7"
-            title="Felipe Smith - Vídeo 07"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-    <div class="video-info">
-
-        <span class="video-number">
-            VIDEO 07
-        </span>
-
-        <h3 class="video-title">
-            Felipe Smith
-        </h3>
-
-        <a
-            id="youtube-link-7"
-            href="https://www.youtube.com/watch?v=v0V72GxZNBU"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="youtube-button">
-
-            ASSISTIR NO YOUTUBE
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="video-card">
-
-    <div class="video-container">
-
-        <iframe
-            id="youtube-video-8"
-            title="Felipe Smith - Vídeo 08"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-    <div class="video-info">
-
-        <span class="video-number">
-            VIDEO 08
-        </span>
-
-        <h3 class="video-title">
-            Felipe Smith
-        </h3>
-
-        <a
-            id="youtube-link-8"
-            href="https://www.youtube.com/watch?v=gRtEIcWHBqo"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="youtube-button">
-
-            ASSISTIR NO YOUTUBE
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="video-card">
-
-    <div class="video-container">
-
-        <iframe
-            id="youtube-video-9"
-            title="Felipe Smith - Vídeo 09"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-        </iframe>
-
-    </div>
-
-    <div class="video-info">
-
-        <span class="video-number">
-            VIDEO 09
-        </span>
-
-        <h3 class="video-title">
-            Felipe Smith
-        </h3>
-
-        <a
-            id="youtube-link-9"
-            href="https://www.youtube.com/watch?v=RT5Cg265X88"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="youtube-button">
-
-            ASSISTIR NO YOUTUBE
-
-        </a>
-
-    </div>
-
-</div>
-```
-
-</div>
 
 </section>
 
 <!-- =====================================================
-     ESTILOS MUSICAIS
+     MÚSICA / ESTILOS
 ===================================================== -->
 
 <section id="music">
 
+```
 <div class="section-label">
     — Estilos
 </div>
@@ -1962,39 +1902,38 @@ representando a direção sonora e o nível de produção atual de Smith.
 
 <div class="genres">
 
+    <div class="genre">
+        <span class="genre-number">01</span>
+        <h3>House</h3>
+    </div>
+
+    <div class="genre">
+        <span class="genre-number">02</span>
+        <h3>Afro House</h3>
+    </div>
+
+    <div class="genre">
+        <span class="genre-number">03</span>
+        <h3>Deep House</h3>
+    </div>
+
+    <div class="genre">
+        <span class="genre-number">04</span>
+        <h3>Progressive House</h3>
+    </div>
+
+    <div class="genre">
+        <span class="genre-number">05</span>
+        <h3>Melodic House Techno</h3>
+    </div>
+
+    <div class="genre">
+        <span class="genre-number">06</span>
+        <h3>Techno</h3>
+    </div>
+
+</div>
 ```
-<div class="genre">
-    <span class="genre-number">01</span>
-    <h3>House</h3>
-</div>
-
-<div class="genre">
-    <span class="genre-number">02</span>
-    <h3>Afro House</h3>
-</div>
-
-<div class="genre">
-    <span class="genre-number">03</span>
-    <h3>Deep House</h3>
-</div>
-
-<div class="genre">
-    <span class="genre-number">04</span>
-    <h3>Progressive House</h3>
-</div>
-
-<div class="genre">
-    <span class="genre-number">05</span>
-    <h3>Melodic House Techno</h3>
-</div>
-
-<div class="genre">
-    <span class="genre-number">06</span>
-    <h3>Techno</h3>
-</div>
-```
-
-</div>
 
 </section>
 
@@ -2004,6 +1943,7 @@ representando a direção sonora e o nível de produção atual de Smith.
 
 <section id="experience">
 
+```
 <div class="section-label">
     — Experiência
 </div>
@@ -2014,52 +1954,53 @@ representando a direção sonora e o nível de produção atual de Smith.
 
 <div class="experience">
 
+    <div class="experience-card">
+
+        <h3>
+            CLUBS
+        </h3>
+
+        <p>
+            Sets desenvolvidos para clubes,
+            lounges e pistas de música
+            eletrônica, adaptando energia
+            e repertório ao momento da noite.
+        </p>
+
+    </div>
+
+
+    <div class="experience-card">
+
+        <h3>
+            EVENTS
+        </h3>
+
+        <p>
+            Experiência em eventos particulares,
+            festas, celebrações e diferentes
+            formatos de apresentação.
+        </p>
+
+    </div>
+
+
+    <div class="experience-card">
+
+        <h3>
+            WARM UP
+        </h3>
+
+        <p>
+            Construção de atmosferas e evolução
+            musical para preparar a pista para
+            grandes apresentações.
+        </p>
+
+    </div>
+
+</div>
 ```
-<div class="experience-card">
-
-    <h3>
-        CLUBS
-    </h3>
-
-    <p>
-        Sets desenvolvidos para clubes,
-        lounges e pistas de música
-        eletrônica, adaptando energia
-        e repertório ao momento da noite.
-    </p>
-
-</div>
-
-<div class="experience-card">
-
-    <h3>
-        EVENTS
-    </h3>
-
-    <p>
-        Experiência em eventos particulares,
-        festas, celebrações e diferentes
-        formatos de apresentação.
-    </p>
-
-</div>
-
-<div class="experience-card">
-
-    <h3>
-        WARM UP
-    </h3>
-
-    <p>
-        Construção de atmosferas e evolução
-        musical para preparar a pista para
-        grandes apresentações.
-    </p>
-
-</div>
-```
-
-</div>
 
 </section>
 
@@ -2071,49 +2012,49 @@ representando a direção sonora e o nível de produção atual de Smith.
     id="press"
     class="press-section">
 
+```
 <div class="press-box">
 
+    <div class="section-label">
+        Press Kit Oficial
+    </div>
+
+    <h2>
+        Felipe Smith
+    </h2>
+
+    <p>
+        Biografia, informações profissionais,
+        estilos musicais e materiais para
+        contratantes, produtores, festivais,
+        clubs e marcas.
+    </p>
+
+    <div class="press-buttons">
+
+        <a
+            href="press-kit.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-primary">
+
+            ABRIR PRESS KIT
+
+        </a>
+
+        <a
+            href="press-kit.pdf"
+            download="djsmith.pdf"
+            class="button button-secondary">
+
+            DOWNLOAD PDF
+
+        </a>
+
+    </div>
+
+</div>
 ```
-<div class="section-label">
-    Press Kit Oficial
-</div>
-
-<h2>
-    Felipe Smith
-</h2>
-
-<p>
-    Biografia, informações profissionais,
-    estilos musicais e materiais para
-    contratantes, produtores, festivais,
-    clubs e marcas.
-</p>
-
-<div class="press-buttons">
-
-    <a
-        href="press-kit.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="button button-primary">
-
-        ABRIR PRESS KIT
-
-    </a>
-
-    <a
-        href="press-kit.pdf"
-        download="djsmith.pdf"
-        class="button button-secondary">
-
-        DOWNLOAD PDF
-
-    </a>
-
-</div>
-```
-
-</div>
 
 </section>
 
@@ -2123,33 +2064,33 @@ representando a direção sonora e o nível de produção atual de Smith.
 
 <section id="contact">
 
+```
 <div class="contact">
 
-```
-<div class="section-label">
-    Booking & Contact
-</div>
+    <div class="section-label">
+        Booking & Contact
+    </div>
 
-<h2>
-    Vamos criar<br>
-    algo juntos.
-</h2>
+    <h2>
+        Vamos criar<br>
+        algo juntos.
+    </h2>
 
-<p>
-    Para bookings, eventos, clubs,
-    festivais e parcerias.
-</p>
+    <p>
+        Para bookings, eventos, clubs,
+        festivais e parcerias.
+    </p>
 
-<a
-    href="mailto:felipegsmith14@gmail.com"
-    class="button button-primary">
+    <a
+        href="mailto:felipegsmith14@gmail.com"
+        class="button button-primary">
 
-    ENTRAR EM CONTATO
+        ENTRAR EM CONTATO
 
-</a>
-```
+    </a>
 
 </div>
+```
 
 </section>
 
@@ -2159,6 +2100,7 @@ representando a direção sonora e o nível de produção atual de Smith.
 
 <footer>
 
+```
 <span>
     © 2026 Felipe Smith
 </span>
@@ -2166,6 +2108,7 @@ representando a direção sonora e o nível de produção atual de Smith.
 <span>
     DJ & Producer
 </span>
+```
 
 </footer>
 
@@ -2175,6 +2118,23 @@ representando a direção sonora e o nível de produção atual de Smith.
 
 <script>
 
+    /* =====================================================
+       SEMPRE INICIAR O SITE NO TOPO
+    ===================================================== */
+
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", () => {
+        window.scrollTo(0, 0);
+    });
+
+
+    /* =====================================================
+       MENU MOBILE
+    ===================================================== */
+
     function toggleMenu() {
 
         const menu =
@@ -2183,6 +2143,7 @@ representando a direção sonora e o nível de produção atual de Smith.
         menu.classList.toggle("active");
 
     }
+
 
     document
         .querySelectorAll(".nav-links a")
@@ -2198,6 +2159,10 @@ representando a direção sonora e o nível de produção atual de Smith.
 
         });
 
+
+    /* =====================================================
+       VÍDEOS DO YOUTUBE
+    ===================================================== */
 
     const VIDEO_YOUTUBE = [
 
@@ -2221,6 +2186,10 @@ representando a direção sonora e o nível de produção atual de Smith.
 
     ];
 
+
+    /* =====================================================
+       CONVERTER LINK DO YOUTUBE PARA ID
+    ===================================================== */
 
     function getYouTubeID(url) {
 
@@ -2252,6 +2221,7 @@ representando a direção sonora e o nível de produção atual de Smith.
                     return videoID;
                 }
 
+
                 if (
                     urlObject.pathname.startsWith("/shorts/")
                 ) {
@@ -2261,6 +2231,7 @@ representando a direção sonora e o nível de produção atual de Smith.
                         .split("/")[0];
 
                 }
+
 
                 if (
                     urlObject.pathname.startsWith("/embed/")
@@ -2274,6 +2245,7 @@ representando a direção sonora e o nível de produção atual de Smith.
 
             }
 
+
             if (hostname === "youtu.be") {
 
                 return urlObject.pathname
@@ -2281,6 +2253,7 @@ representando a direção sonora e o nível de produção atual de Smith.
                     .split("/")[0];
 
             }
+
 
             return null;
 
@@ -2299,6 +2272,10 @@ representando a direção sonora e o nível de produção atual de Smith.
 
     }
 
+
+    /* =====================================================
+       CONFIGURAR PLAYERS
+    ===================================================== */
 
     function setupYouTubeVideos() {
 
@@ -2369,6 +2346,10 @@ representando a direção sonora e o nível de produção atual de Smith.
 
     }
 
+
+    /* =====================================================
+       INICIALIZAÇÃO
+    ===================================================== */
 
     document.addEventListener(
         "DOMContentLoaded",
