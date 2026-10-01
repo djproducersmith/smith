@@ -1,14 +1,40 @@
-/* =====================================================
-   INICIAR SITE NO TOPO
-===================================================== */
+<!-- =====================================================
+     MENU
+===================================================== -->
 
-if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-}
+<nav>
 
-window.addEventListener("load", () => {
-    window.scrollTo(0, 0);
-});            Conecte-se
+    <a
+        href="#"
+        class="nav-logo">
+
+        <img
+            src="logo-felipe.png"
+            alt="Felipe Smith">
+
+    </a>
+
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+        aria-label="Abrir menu">
+
+        ☰
+
+    </button>
+
+
+    <div
+        class="nav-links"
+        id="navLinks">
+
+        <a href="#about">
+            Sobre
+        </a>
+
+        <a href="#social">
+            Conecte-se
         </a>
 
         <a href="#tracks">
@@ -34,3 +60,20 @@ window.addEventListener("load", () => {
     </div>
 
 </nav>
+
+
+<!-- =====================================================
+     INICIAR SITE NO TOPO
+===================================================== -->
+
+<script>
+
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+    }
+
+    window.addEventListener("load", () => {
+        window.scrollTo(0, 0);
+    });
+
+</script>
